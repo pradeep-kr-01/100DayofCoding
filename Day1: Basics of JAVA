@@ -1,0 +1,63 @@
+
+// Printing a Pattern
+
+public class JavaBasics{
+    public static void main(String args[]){
+        System.out.println("****");
+        System.out.println("***");
+        System.out.println("**");
+        System.out.println("*");
+    }
+}
+
+/*In aprogram,input 3 numbers:A,B and C.You have to output the average of these 3 numbers.
+(Hint : Average of N numbers is sum of those numbers divided by N)*/
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        float A = s.nextFloat();
+        float B = s.nextFloat();
+        float C = s.nextFloat();
+        float avg = (A+B+C)/3;
+        System.out.println(avg);
+    }
+}
+
+
+
+/* In a program,input the side of a square.You have to out put the area of the square.*/
+
+
+import java.util.*;
+
+public class JavaBsics{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int side=sc.nextInt();
+        int area=side*side;
+        System.out.println(area);
+    }
+}
+
+
+/* Enter cost of 3 items from the user(usingfloatdatatype)-a pencil,a pen and an eraser.
+ You have to output the total cost of the items back to the user as their bill.
+*/
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        float pencil=sc.nextFloat();
+        float pen=sc.nextFloat();
+        float eraser=sc.nextFloat();
+        float bill=(pencil + pen + eraser);
+        System.out.println(bill);
+        
+    }
+}
+ 
+
