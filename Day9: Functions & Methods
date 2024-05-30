@@ -1,0 +1,94 @@
+import java.util.*;
+
+public class Function{
+
+    public static int CalculateSum(int num1, int num2){
+
+        int sum = num1 + num2;
+        return sum;
+
+    }
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int sum = CalculateSum(a,b);
+        System.out.println("Sum is " + sum);
+        
+    }
+}
+
+
+public class Function{
+    public static void swap(int a, int b){
+        int temp = a ;
+        a = b;
+        b = temp;
+
+        System.out.println(a);
+        System.out.println(b);
+         
+    }
+    public static void main(String args[]) {
+        int a = 5;
+        int b = 10;
+        swap(a,b);        
+    }
+}
+
+
+
+public class Function{
+    public static int product(int a, int b){
+        int product= a*b;
+        System.out.println(product);
+        return product;
+    }
+    public static void main(String args[]){
+        int a = 5;
+        int b = 10;
+        product(a,b);
+
+
+    }
+}
+
+
+public class Function{
+    public static int factorial(int a){
+        int f=1;
+        for(int i=1; i<=a; i++ ){
+            f = f * i;
+        }
+        return f;        
+    }
+    public static int bino(int n, int r){
+        int fact_n=factorial(n);
+        int fact_r=factorial(r);
+        int fact_nmr=factorial(n-r);
+        int bc = fact_n/(fact_r * fact_nmr);
+        return bc;
+    }
+    public static void main(String args[]){
+        System.out.print(bino(5,2));
+
+    }
+
+    
+}
+
+
+public class Function{
+    public static int sum(int a, int b){
+        return a+b;
+    }
+    public static int sum(int a,int b,int c){
+        return a+b+c;
+    }
+    public static void main(String args[]){
+        System.out.println(sum(5,3));
+        System.out.println(sum(5,3,1));
+    }
+
+}
