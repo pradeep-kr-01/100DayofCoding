@@ -1,0 +1,75 @@
+//FIzzBuzz Problem
+
+import java.util.*;
+
+public class program{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if(n%15==0){
+            System.out.println("FizzBuzz");
+
+        }else if(n%3==0){
+            System.out.println("Fizz");
+
+        }else if(n%5==0){
+            System.out.print("Buzz");
+
+        }else{
+            System.out.println(n);
+        }
+    }
+}
+
+//Weekday and Weekend
+
+import java.util.*;
+
+public class program{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+
+        switch(a){
+            case 1,2,3,4,5 : {System.out.println("Weekday"); break;}
+            case 6,7: {System.out.println("Weekend"); break;}
+            default:{System.out.println("Invalid Input");}
+        }
+    }
+}
+
+//Area of triangle
+
+import java.util.*;
+
+public class program{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int b = sc.nextInt();
+        int h = sc.nextInt();
+
+        float area = (float) 0.5 * b * h ;
+
+        System.out.println("Area of Triangle " + area);
+    }
+}
+
+//Perimeter of Triangle
+
+import java.util.*;
+
+public class program{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+
+        int perimeter = a+b+c;
+
+        System.out.println("Perimeter of Triangle " + perimeter );
+
+    }
+}
