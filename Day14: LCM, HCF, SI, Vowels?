@@ -1,0 +1,102 @@
+// Java program to find LCM
+// of two numbers.
+class gfg {
+    // Gcd of u and v
+    // using recursive method
+    static int GCD(int u, int v)
+    {
+        if (u == 0)
+            return v;
+        return GCD(v % u, u);
+    }
+
+    // LCM of two numbers
+    static int LCM(int u, int v)
+    {
+        return (u / GCD(u, v)) * v;
+    }
+
+    // main method
+    public static void main(String[] args)
+    {
+        int u = 25, v = 15;
+        System.out.println("LCM of " + u + " and " + v
+                           + " is " + LCM(u, v));
+    }
+}
+
+// java program to check whether input 
+// character is a vowel or consonant 
+
+import java.io.*; 
+
+public class geek { 
+
+	// Function to find whether an input 
+	// character is vowel or not 
+	static void Vowel_Or_Consonant(char y) 
+	{ 
+		if (y == 'a' || y == 'e' || y == 'i' || y == 'o'
+			|| y == 'u') 
+			System.out.println("It is a Vowel."); 
+		else
+			System.out.println("It is a Consonant."); 
+	} 
+
+	// The Driver code 
+	static public void main(String[] args) 
+	{ 
+		Vowel_Or_Consonant('b'); 
+		Vowel_Or_Consonant('u'); 
+	} 
+}
+
+// Java program to compute
+// simple interest for given principal
+// amount, time and rate of interest.
+import java.io.*;
+
+class GFG {
+	public static void main(String args[])
+	{
+		// We can change values here for
+		// different inputs
+		float P = 1, R = 1, T = 1;
+
+		/* Calculate simple interest */
+		float SI = (P * T * R) / 100;
+		System.out.println("Simple interest = " + SI);
+	}
+}
+
+
+
+// Java program to find GCD of two numbers 
+class GFG { 
+	// Gcd of x and y using recursive function 
+	static int GCD(int x, int y) 
+	{ 
+		// Everything is divisible by 0 
+		if (x == 0) 
+			return y; 
+		if (y == 0) 
+			return x; 
+
+		// Both the numbers are equal 
+		if (x == y) 
+			return x; 
+
+		// x is greater 
+		if (x > y) 
+			return GCD(x - y, y); 
+		return GCD(x, y - x); 
+	} 
+
+	// The Driver method 
+	public static void main(String[] args) 
+	{ 
+		int x = 100, y = 88; 
+		System.out.println("GCD of " + x + " and " + y 
+						+ " is " + GCD(x, y)); 
+	} 
+}
