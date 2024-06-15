@@ -1,0 +1,83 @@
+//Selection Sort
+
+public class sorting{
+
+    public static void SelectionSorting(int arr[]){
+
+        for(int i=0; i<arr.length-1;i++){
+            int minPos=i;
+            for(int j=i+1; j<arr.length;j++){
+                if(arr[minPos]>arr[j]){
+                    minPos=j;
+                }
+            }
+            //swap
+            int temp=arr[minPos];
+            arr[minPos]=arr[i];
+            arr[i]=temp;
+        }
+    }
+
+    public static void printarr(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int arr[]={5,4,1,2,3};
+        SelectionSorting(arr);
+        printarr(arr);
+    }
+}
+
+//Insertion Sort
+
+public class sorting{
+
+    public static void InsertionSort(int arr[]){
+        for(int i=1; i<arr.length;i++){
+            int curr=arr[i];
+            int prev=i-1;
+            //finding correct pos to insert
+            while(prev >= 0 && arr[prev]>curr){
+                arr[prev+1]=arr[prev];
+                prev--;
+            }
+            //insertion
+            arr[prev+1]=curr;
+        }
+    } 
+    public static void printarr(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[]={5,3,4,1,2};
+        InsertionSort(arr);
+        printarr(arr);
+    }
+
+}
+
+//Using In-built function for Sorting
+
+import java.util.Arrays;
+
+public class sorting{
+    public static void main(String[] args) {
+        int arr[]={5,7,6,8,2,3,4,1};
+        Arrays.sort(arr);
+        printarr(arr);
+    }
+
+    public static void printarr(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println();
+    }
+}
