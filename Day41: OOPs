@@ -1,0 +1,68 @@
+//Getters and Setters
+
+class Student {
+    private String name;
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+
+    // Setter
+    public void setName(String newName) {
+        name = newName;
+    }
+}
+
+//Access Modifiers
+
+class MyClass {
+    private int secretNumber;
+    public String publicInfo;
+}
+
+//Consstructors
+
+//Default 
+class Person {
+    public Person() {
+        // Initialization code
+    }
+}
+
+//Parameterized
+
+class Book {
+    private String title;
+
+    public Book(String bookTitle) {
+        title = bookTitle;
+    }
+}
+
+//Method Overloading
+
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+//Method Overriding
+
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
