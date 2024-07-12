@@ -1,0 +1,58 @@
+//Calculate x  to the power n
+
+public class recursionBasics{
+    public static int xPower(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        int xnm1 = xPower(x, n-1);
+        int xn = x * xnm1;
+        return xn;
+    }
+
+// (OPTIMISED) Calculate x to the power n
+    public static int power(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+
+        int xnm2 = power(x, n/2);
+        int halfsq = xnm2 * xnm2;
+
+        //n is odd
+
+        if(n % 2 != 0){
+            return x * xnm2;
+        }
+        return halfsq;
+        
+    }
+
+//Tilling Problem
+/* Given a "2 x n" board and tiles of size "2 x 1", count
+the number of the ways to the given board using the 2 x 1 tiles.
+(A tile can either be placed horizontally or vertically) */
+
+    public static int TillingProblem(int n){ // 2 x n - floor size
+        //base case
+        if(n == 0 || n ==1){
+            return 1;
+        }
+
+        //vertical tilling
+        int fnm1 = TillingProblem(n-1);
+
+        //Horizontal Tilling
+        int fnm2 = TillingProblem(n-2);
+        
+        return fnm1 + fnm2;
+    }
+    public static void main(String[] args) {
+
+        System.out.println(xPower(2, 5));
+
+        System.out.println(power(2, 5));
+
+        System.out.println(TillingProblem(3));
+    }
+}
