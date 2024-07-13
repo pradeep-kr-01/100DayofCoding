@@ -1,0 +1,56 @@
+//Remove Duplicates from a string
+
+public class recursionBasics{
+    public static void removeDuplicate(String str, int idx, StringBuilder newStr, boolean map[]){
+        if(idx == str.length()){
+            System.out.println(newStr);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if(map[currChar-'a']==true){
+            removeDuplicate(str, idx+1, newStr, map);
+
+        }else{
+            map[currChar-'a']=true;
+            removeDuplicate(str, idx+1, newStr.append(currChar), map);
+        }
+
+    }
+
+//Friends Pairing Problem
+/* GIven n friends, each one can remain single or can be paired up with some other
+friend. Each friend can be paired only once. Find out the total ways in which friends can 
+remain single or can be paired up. */
+
+    public static int friendsPairing(int n){
+        if(n==1 || n==2){
+            return n;
+        }
+        int fnm1 = friendsPairing(n-1);
+        int fnm2 = friendsPairing(n-2);
+        int pairways = (n-1) * fnm2;
+
+        int totalways = fnm1 + pairways;
+        return totalways;
+
+    }
+
+//Binary Strings Problem
+//Print all binary strings of size N without consecutive ones.
+     public static void printBinaryStrings(int n, int lastPlacce, String str){
+        if(n==0){
+            System.out.println(str);
+            return;
+        }
+        printBinaryStrings(n-1, 0, str + "0");
+        if(lastPlacce == 0){
+            printBinaryStrings(n-1, 1, str + "1");
+        }
+     }
+    public static void main(String[] args) {
+        String str = "appnacolllege";
+        removeDuplicate(str, 0, new StringBuilder(""),new boolean[26]);
+        System.out.println(friendsPairing(4));
+        printBinaryStrings(3, 0, "");
+    }
+}
