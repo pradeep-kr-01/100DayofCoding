@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class arrlist{
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        //Adding Operation
+        list.add(1);
+        list.add(2);
+        list.add(5);
+        list.add(9);
+
+        System.out.print(list);
+        System.out.println();
+
+        //GEt operation
+        int element = list.get(2);
+        System.out.println(element);
+
+        //Delete Operation
+        list.remove(2);
+        System.out.print(list);
+        System.out.println();
+
+        //Set operation
+        list.set(2, 12);
+        System.out.print(list);
+        System.out.println();
+
+        //Contain Operation
+        System.out.println(list.contains(12));
+
+        //Size of an ArrayList
+        System.out.println(list.size());
+
+    }
+}
