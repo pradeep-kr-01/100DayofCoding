@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class MiniProject{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int myNumber = (int)(Math.random()*100);
+        int userNumber = 0;
+
+        do{
+            System.out.println("Guess the number: ");
+            userNumber = sc.nextInt();
+
+            if(userNumber==myNumber){
+                System.out.println("Woahhhhh, You gussed RIGHT!");
+            }else if(userNumber>myNumber){
+                System.out.println("You gussed too large number");
+            }else{
+                System.out.println("You gussed too small number");
+            }
+        }
+        while (userNumber >= 0);
+
+        System.out.print("My Number was: ");
+        System.out.println(myNumber);
+            
+    }
+}
